@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Custom Mouse Tracker -->
+    <div class="mouse-tracker"></div>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -30,6 +33,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
@@ -91,24 +97,20 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-paragraph">
-                        I'm a passionate Senior iOS Developer with over 7 years of experience creating 
-                        innovative iOS applications that make a difference. My journey began with a curiosity 
-                        about how mobile technology can improve people's daily lives, and that curiosity continues 
-                        to drive my work today.
+                        I’m a Senior iOS Developer with 7+ years of experience building innovative, user-focused iOS applications that deliver real value. My journey started with a deep curiosity about how mobile technology can transform everyday life—and that same passion continues to drive me today.
                     </p>
                     <p class="about-paragraph">
-                        I specialize in native iOS development with expertise in Swift, SwiftUI, UIKit, and MVVM architecture. 
-                        I believe in writing clean, maintainable code and following best practices to deliver 
-                        high-quality applications that users love. My experience spans from startups to enterprise-level projects.
+                        I specialize in native iOS development with hands-on expertise in Swift, SwiftUI, UIKit, and MVVM architecture. My approach focuses on clean, maintainable, and scalable code, ensuring every app I build is not only high-performing but also a pleasure for users to interact with.
                     </p>
                     <p class="about-paragraph">
-                        When I'm not coding, you can find me exploring new iOS frameworks, contributing to 
-                        the developer community through articles and posts, or sharing knowledge about iOS development. 
-                        I'm always eager to take on new challenges and collaborate with amazing teams.
+                        Over the years, I’ve had the privilege of working on everything from agile startup projects to enterprise-level applications, consistently delivering solutions that exceed expectations.
+                    </p>
+                    <p class="about-paragraph">
+                       Beyond coding, I stay at the forefront of iOS innovation by exploring new frameworks, sharing insights through articles, and engaging with the developer community. I thrive on collaboration, problem-solving, and bringing creative ideas to life—and I’m always ready for the next challenge.
                     </p>
                     <div class="about-stats">
                         <div class="stat">
-                            <span class="stat-number">100+</span>
+                            <span class="stat-number">40+</span>
                             <span class="stat-label">iOS Apps Delivered</span>
                         </div>
                         <div class="stat">
@@ -324,6 +326,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="95"></div>
                             </div>
+                            <span class="skill-percentage">95%</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -333,6 +336,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="90"></div>
                             </div>
+                            <span class="skill-percentage">90%</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -342,6 +346,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="95"></div>
                             </div>
+                            <span class="skill-percentage">95%</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -351,6 +356,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="85"></div>
                             </div>
+                            <span class="skill-percentage">85%</span>
                         </div>
                     </div>
                 </div>
@@ -366,6 +372,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="85"></div>
                             </div>
+                            <span class="skill-percentage">85%</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -375,6 +382,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="80"></div>
                             </div>
+                            <span class="skill-percentage">80%</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -384,6 +392,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="75"></div>
                             </div>
+                            <span class="skill-percentage">75%</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -393,6 +402,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="90"></div>
                             </div>
+                            <span class="skill-percentage">90%</span>
                         </div>
                     </div>
                 </div>
@@ -408,6 +418,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="95"></div>
                             </div>
+                            <span class="skill-percentage">95%</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -417,6 +428,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="90"></div>
                             </div>
+                            <span class="skill-percentage">90%</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -426,6 +438,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="75"></div>
                             </div>
+                            <span class="skill-percentage">75%</span>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">
@@ -435,6 +448,7 @@
                             <div class="skill-level">
                                 <div class="skill-bar" data-level="80"></div>
                             </div>
+                            <span class="skill-percentage">80%</span>
                         </div>
                     </div>
                 </div>
@@ -451,83 +465,200 @@
             </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-date-wrapper">
+                        <div class="timeline-date">Feb 2025 - Present</div>
+                        <div class="timeline-dot"></div>
+                    </div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2022 - Present</div>
-                        <h3 class="timeline-title">Senior iOS Developer</h3>
-                        <h4 class="timeline-company">TechVision Solutions</h4>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Senior iOS Developer</h3>
+                            <h4 class="timeline-company">Vasundhara Infotech · Surat, Gujarat</h4>
+                        </div>
                         <p class="timeline-description">
-                            Leading iOS development team, architecting scalable SwiftUI applications, and implementing 
-                            advanced iOS features. Delivered 15+ production apps with 99.9% crash-free rates and 
-                            mentored junior developers in Swift best practices.
+                            Leading iOS development initiatives and spearheading innovative mobile solutions for enterprise clients. 
+                            Architecting scalable iOS applications using latest Swift technologies and modern design patterns. 
+                            Collaborating with cross-functional teams to deliver high-performance apps with exceptional user experience. 
+                            Implementing advanced iOS features including CoreML integration, advanced animations, and performance optimizations 
+                            to exceed client expectations and industry standards.
                         </p>
                         <div class="timeline-skills">
                             <span class="timeline-skill">SwiftUI</span>
-                            <span class="timeline-skill">Swift</span>
+                            <span class="timeline-skill">Swift 5.0</span>
                             <span class="timeline-skill">MVVM</span>
+                            <span class="timeline-skill">CoreML</span>
                             <span class="timeline-skill">Team Leadership</span>
+                            <span class="timeline-skill">Performance Optimization</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-date-wrapper">
+                        <div class="timeline-date">Nov 2023 - Jan 2025</div>
+                        <div class="timeline-dot"></div>
+                    </div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2020 - 2022</div>
-                        <h3 class="timeline-title">iOS Application Developer</h3>
-                        <h4 class="timeline-company">InnovateMobile Inc.</h4>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">iOS Developer</h3>
+                            <h4 class="timeline-company">Self-Employed · Navsari, Gujarat</h4>
+                        </div>
                         <p class="timeline-description">
-                            Developed and maintained 20+ iOS applications serving 500k+ users. Specialized in 
-                            UIKit to SwiftUI migration, Core Data optimization, and implementing complex 
-                            animations with seamless user experiences.
+                            Developed innovative mobile solutions including a QR Code payment-enabled store application and a 
+                            comprehensive health meditation app with advanced features. Implemented secure payment integration 
+                            using Apple Pay and custom payment gateways, ensuring PCI DSS compliance. Built real-time push 
+                            notification systems and optimized backend API integrations, resulting in 40% improved transaction 
+                            efficiency and enhanced user engagement through seamless payment experiences.
                         </p>
                         <div class="timeline-skills">
-                            <span class="timeline-skill">Swift</span>
-                            <span class="timeline-skill">UIKit</span>
-                            <span class="timeline-skill">Core Data</span>
-                            <span class="timeline-skill">REST APIs</span>
+                            <span class="timeline-skill">QR Code Integration</span>
+                            <span class="timeline-skill">Payment Gateways</span>
+                            <span class="timeline-skill">Push Notifications</span>
+                            <span class="timeline-skill">Backend Optimization</span>
+                            <span class="timeline-skill">Apple Pay</span>
+                            <span class="timeline-skill">Health APIs</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-date-wrapper">
+                        <div class="timeline-date">Mar 2022 - Oct 2023</div>
+                        <div class="timeline-dot"></div>
+                    </div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2018 - 2020</div>
-                        <h3 class="timeline-title">iOS Developer</h3>
-                        <h4 class="timeline-company">AppCraft Studios</h4>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Senior iOS Developer (Remote)</h3>
+                            <h4 class="timeline-company">SVAP Infotech Pvt. Ltd. · Jaipur, Rajasthan</h4>
+                        </div>
                         <p class="timeline-description">
-                            Built feature-rich iOS applications from ground up using Swift and UIKit. 
-                            Implemented complex UI/UX designs, integrated third-party SDKs, and 
-                            optimized app performance for better user engagement.
+                            Led the development of a sophisticated fantasy sports application similar to Dream11, managing the 
+                            complete development lifecycle from conception to deployment. Optimized development workflows and 
+                            implemented agile methodologies, achieving 30% faster project completion times. Collaborated with 
+                            cross-functional teams including backend developers, UI/UX designers, and product managers to deliver 
+                            scalable and user-friendly solutions with real-time data synchronization and live score updates.
                         </p>
                         <div class="timeline-skills">
-                            <span class="timeline-skill">iOS</span>
-                            <span class="timeline-skill">Swift</span>
-                            <span class="timeline-skill">UIKit</span>
-                            <span class="timeline-skill">Auto Layout</span>
+                            <span class="timeline-skill">Fantasy Sports</span>
+                            <span class="timeline-skill">Real-time Data</span>
+                            <span class="timeline-skill">Team Leadership</span>
+                            <span class="timeline-skill">Agile Methodology</span>
+                            <span class="timeline-skill">WebSocket</span>
+                            <span class="timeline-skill">Remote Collaboration</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-date-wrapper">
+                        <div class="timeline-date">Aug 2018 - Feb 2022</div>
+                        <div class="timeline-dot"></div>
+                    </div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2017 - 2018</div>
-                        <h3 class="timeline-title">Junior iOS Developer</h3>
-                        <h4 class="timeline-company">MobileTech Solutions</h4>
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Freelance iOS Developer</h3>
+                            <h4 class="timeline-company">Self-Employed · Navsari, Gujarat</h4>
+                        </div>
                         <p class="timeline-description">
-                            Started iOS development journey, learned Swift fundamentals, and contributed to 
-                            multiple iOS projects. Gained hands-on experience with Xcode, Interface Builder, 
-                            and iOS app deployment process.
+                            Delivered diverse industry-specific applications across social media, food delivery, and transportation 
+                            sectors for multiple clients. Implemented MVVM architecture pattern consistently across all projects, 
+                            enhancing code scalability and maintainability by 45%. Developed custom social media features, 
+                            real-time order tracking systems, and GPS-based transportation solutions. Successfully managed 
+                            10+ client projects with 98% client satisfaction rate and on-time delivery.
                         </p>
                         <div class="timeline-skills">
-                            <span class="timeline-skill">Swift</span>
+                            <span class="timeline-skill">MVVM Architecture</span>
+                            <span class="timeline-skill">Social Media APIs</span>
+                            <span class="timeline-skill">Food Delivery</span>
+                            <span class="timeline-skill">Transportation</span>
+                            <span class="timeline-skill">GPS Integration</span>
+                            <span class="timeline-skill">Client Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date-wrapper">
+                        <div class="timeline-date">Feb 2018 - Jul 2018</div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">iOS Developer</h3>
+                            <h4 class="timeline-company">Sassy Infotech Pvt. Ltd. · Surat, Gujarat</h4>
+                        </div>
+                        <p class="timeline-description">
+                            Developed comprehensive travel and hotel booking applications with integrated payment systems and 
+                            real-time availability checking. Led multiple concurrent projects ensuring timely delivery and 
+                            adherence to high-quality coding standards. Implemented advanced booking algorithms, location-based 
+                            services, and seamless payment integration. Collaborated with hotel partners to integrate APIs and 
+                            deliver exceptional user experience with 4.7+ App Store ratings.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="timeline-skill">Travel Apps</span>
+                            <span class="timeline-skill">Hotel Booking</span>
+                            <span class="timeline-skill">Payment Integration</span>
+                            <span class="timeline-skill">Location Services</span>
+                            <span class="timeline-skill">API Integration</span>
+                            <span class="timeline-skill">Project Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date-wrapper">
+                        <div class="timeline-date">Jan 2017 - Jan 2018</div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Junior iOS Developer</h3>
+                            <h4 class="timeline-company">Elaunch Infotech · Surat, Gujarat</h4>
+                        </div>
+                        <p class="timeline-description">
+                            Contributed to developing diverse mobile applications with seamless social media login integration 
+                            using Facebook, Google, and Apple Sign-In APIs. Optimized RESTful API calls and implemented 
+                            efficient caching mechanisms, reducing average response time by 35% and enhancing overall app 
+                            functionality. Gained foundational experience in iOS development lifecycle, debugging, and 
+                            App Store deployment processes while working collaboratively in an agile development environment.
+                        </p>
+                        <div class="timeline-skills">
+                            <span class="timeline-skill">Social Media APIs</span>
+                            <span class="timeline-skill">REST API Optimization</span>
+                            <span class="timeline-skill">Swift Fundamentals</span>
                             <span class="timeline-skill">Xcode</span>
-                            <span class="timeline-skill">Storyboards</span>
-                            <span class="timeline-skill">Git</span>
+                            <span class="timeline-skill">App Store Deployment</span>
+                            <span class="timeline-skill">Team Collaboration</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medium Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest from Medium</h2>
+                <p class="section-subtitle">Insights and thoughts on iOS development</p>
+            </div>
+            <div class="blog-content">
+                <div class="blog-grid" id="blogGrid">
+                    <!-- Blog posts will be loaded here -->
+                    <div class="blog-loading">
+                        <div class="loading-spinner-blog">
+                            <div class="spinner-dot"></div>
+                            <div class="spinner-dot"></div>
+                            <div class="spinner-dot"></div>
+                        </div>
+                        <p>Loading latest articles...</p>
+                    </div>
+                </div>
+                <div class="blog-footer">
+                    <a href="https://medium.com/@dhruvinbhalodiya752" target="_blank" class="btn btn-primary blog-cta">
+                        <i class="fab fa-medium"></i>
+                        View All Articles on Medium
+                    </a>
                 </div>
             </div>
         </div>
