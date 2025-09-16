@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initDynamicBackground();
         initLoadingAnimation();
         initMediumBlog();
+        initTestimonials();
         
         // Add console log for successful initialization
         console.log('Portfolio website initialized successfully');
@@ -1247,3 +1248,181 @@ function extractImage(description) {
     return imgMatch ? imgMatch[1] : null;
 }
 */
+
+// Testimonials Integration
+function initTestimonials() {
+    try {
+        console.log('Initializing testimonials section...');
+        loadTestimonials();
+    } catch (error) {
+        console.error('Error initializing testimonials:', error);
+    }
+}
+
+// Load testimonials function
+async function loadTestimonials() {
+    const testimonialsGrid = document.querySelector('.testimonials-grid');
+    if (!testimonialsGrid) {
+        console.warn('Testimonials grid element not found');
+        return;
+    }
+
+    try {
+        const testimonials = getTestimonialsData();
+        displayTestimonials(testimonials);
+        
+    } catch (error) {
+        console.error('Error loading testimonials:', error);
+    }
+}
+
+// Get testimonials data
+function getTestimonialsData() {
+    return [
+        {
+            name: "Sarah Johnson",
+            title: "Product Manager at TechStart Inc.",
+            company: "San Francisco, CA",
+            icon: "fas fa-user",
+            rating: 5,
+            text: "Dhruvin delivered an exceptional iOS app that exceeded our expectations. His attention to detail, technical expertise in SwiftUI, and ability to understand complex requirements made him an invaluable partner. The app launched successfully with 4.8 stars on the App Store."
+        },
+        {
+            name: "Michael Chen",
+            title: "CTO at FinanceFlow Solutions",
+            company: "New York, NY",
+            icon: "fas fa-user-tie",
+            rating: 5,
+            text: "Working with Dhruvin was a game-changer for our fintech app. His deep knowledge of iOS security, payment integrations, and performance optimization helped us create a robust banking application that our users love. Highly recommended for complex iOS projects."
+        },
+        {
+            name: "Emily Rodriguez",
+            title: "Head of Digital at EduTech Solutions",
+            company: "Austin, TX",
+            icon: "fas fa-user-graduate",
+            rating: 5,
+            text: "Dhruvin's expertise in Swift and iOS development is outstanding. He transformed our outdated app into a modern, user-friendly experience using the latest iOS technologies. His communication skills and project management made the entire process smooth and efficient."
+        },
+        {
+            name: "David Kumar",
+            title: "Senior iOS Developer at Apple",
+            company: "Cupertino, CA",
+            icon: "fas fa-code",
+            rating: 5,
+            text: "As a fellow iOS developer, I can confidently say Dhruvin is one of the best in the field. His code quality, architectural decisions, and mentorship during our collaboration on a health app project were exceptional. He's my go-to recommendation for iOS development."
+        },
+        {
+            name: "Lisa Thompson",
+            title: "Founder & CEO at RetailMax",
+            company: "Seattle, WA",
+            icon: "fas fa-shopping-cart",
+            rating: 5,
+            text: "Dhruvin delivered our e-commerce iOS app ahead of schedule with remarkable quality. His understanding of user experience, coupled with his technical skills in Swift and Core Data, resulted in an app that significantly boosted our mobile sales by 150%."
+        },
+        {
+            name: "James Wilson",
+            title: "VP of Technology at TravelEase",
+            company: "Miami, FL",
+            icon: "fas fa-plane",
+            rating: 5,
+            text: "Dhruvin's work on our travel app was phenomenal. His integration of location services, offline capabilities, and real-time booking features created an app that users describe as 'intuitive and powerful.' His professionalism and expertise make him a top choice for iOS development."
+        }
+    ];
+}
+
+// Display testimonials
+function displayTestimonials(testimonials) {
+    const testimonialsGrid = document.querySelector('.testimonials-grid');
+    if (!testimonialsGrid) return;
+    
+    const testimonialsHTML = testimonials.map(testimonial => createTestimonialCard(testimonial)).join('');
+    
+    testimonialsGrid.innerHTML = testimonialsHTML;
+    
+    // Add footer content
+    const testimonialsContainer = document.querySelector('#testimonials .container');
+    if (testimonialsContainer && !testimonialsContainer.querySelector('.testimonials-footer')) {
+        const footerHTML = `
+            <div class="testimonials-footer">
+                <p class="testimonials-note">
+                    <i class="fas fa-handshake"></i>
+                    Ready to work together? Let's create something amazing!
+                </p>
+                <a href="#contact" class="btn btn-primary testimonials-cta">
+                    Start Your Project
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        `;
+        testimonialsContainer.insertAdjacentHTML('beforeend', footerHTML);
+    }
+    
+    // Initialize animations for testimonial cards
+    initTestimonialAnimations();
+}
+
+// Create testimonial card HTML
+function createTestimonialCard(testimonial) {
+    const starsHTML = Array(testimonial.rating).fill().map(() => 
+        '<i class="fas fa-star"></i>'
+    ).join('');
+    
+    return `
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <div class="testimonial-quote">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">
+                    "${testimonial.text}"
+                </p>
+                <div class="testimonial-rating">
+                    ${starsHTML}
+                </div>
+            </div>
+            <div class="testimonial-author">
+                <div class="author-avatar">
+                    <div class="avatar-placeholder">
+                        <i class="${testimonial.icon}"></i>
+                    </div>
+                </div>
+                <div class="author-info">
+                    <h4 class="author-name">${testimonial.name}</h4>
+                    <p class="author-title">${testimonial.title}</p>
+                    <div class="author-company">
+                        <i class="fab fa-linkedin"></i>
+                        <span>${testimonial.company}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Initialize testimonial card animations
+function initTestimonialAnimations() {
+    try {
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        
+        const testimonialObserver = new IntersectionObserver(function(entries) {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 150);
+                    testimonialObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        testimonialCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            testimonialObserver.observe(card);
+        });
+    } catch (error) {
+        console.error('Error initializing testimonial animations:', error);
+    }
+}
